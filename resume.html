@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnold Jay Lolong | Resume</title>
+    <style>
+        /* Main Styles */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-text: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .resume-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        /* Header Styles */
+        .resume-header {
+            display: flex;
+            padding: 40px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .header-text {
+            flex: 2;
+        }
+        
+        .header-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+        
+        /* Main Content */
+        .resume-main {
+            display: flex;
+            padding: 0;
+        }
+        
+        .left-column {
+            flex: 1;
+            padding: 30px;
+            background-color: var(--light-color);
+        }
+        
+        .right-column {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        /* Section Styles */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Experience Items */
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 20px;
+        }
+        
+        .job-title, .degree, .project-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        
+        .company, .university {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+        
+        .date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+        
+        .job-description, .degree-description, .project-description {
+            margin-top: 10px;
+        }
+        
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category h3 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        
+        /* Download Button */
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .download-btn i {
+            margin-right: 8px;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-style: italic;
+            margin: 5px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-header {
+                flex-direction: column;
+            }
+            
+            .header-image {
+                margin-top: 20px;
+            }
+            
+            .resume-main {
+                flex-direction: column;
+            }
+            
+            .download-btn {
+                position: static;
+                margin: 0 auto 20px;
+                display: block;
+                width: fit-content;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="resume-container">
+        <button class="download-btn" onclick="window.print()">
+            <i class="fas fa-download"></i> Download PDF
+        </button>
+        
+        <header class="resume-header">
+            <div class="header-text">
+                <h1>Arnold Jay Lolong</h1>
+                <p class="job-title">Computer Science Graduate | Software Engineer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+69 9764587563</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ajlolong15@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Ajlolong.dev</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Metro manila, Las Piñas</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/arnold-jay-lolong</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/AjPogi90</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-leetcode"></i>
+                        <span>leetcode.com/ajlolong</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-image">
+                <img src="image/profile.PNG" alt="Profile Photo" class="profile-img">
+            </div>
+        </header>
+        
+        <main class="resume-main">
+            <div class="left-column">
+                <section class="section">
+                    <h2 class="section-title">SUMMARY</h2>
+                    <p>Computer Science with expertise in full-stack development, algorithms, and system design. Passionate about building scalable applications and solving complex problems. Strong foundation in data structures and OOP principles with experience across multiple programming languages and frameworks.</p>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">TECHNICAL SKILLS</h2>
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-container">
+                            <span class="skill">Python</span>
+                            <span class="skill">Java</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">C++</span>
+                            <span class="skill">C</span>
+                            <span class="skill">SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skills-container">
+                            <span class="skill">React</span>
+                            <span class="skill">Node.js</span>
+                            <span class="skill">Express</span>
+                            <span class="skill">Django</span>
+                            <span class="skill">HTML5</span>
+                            <span class="skill">CSS</span>
+                            <span class="skill">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skills-container">
+                            <span class="skill">MongoDB</span>
+                            <span class="skill">MySQL</span>
+                            <span class="skill">Firebase</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skills-container">
+                            <span class="skill">Git</span>
+                            <span class="skill">Github</span>
+                            <span class="skill">AWS</span>
+                            <span class="skill">Linux</span>
+                            <span class="skill">CI/CD</span>
+                            <span class="skill">Agile</span>
+                            <span class="skill">JIRA</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">EDUCATION</h2>
+                    <div class="education-item">
+                        <p class="degree">B.S. in Computer Science</p>
+                        <p class="university">Cavite State University</p>
+                        <p class="date">2022 - 2026</p>
+                        <p class="degree-description">GPA: 2.5</p>
+                        <p class="degree-description">Relevant Coursework: Algorithms, Data Structures, Computer Networks, Database Systems, Computer Hardware, Operating Systems</p>
+                    </div>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">ACHIEVEMENTS</h2>
+                    <ul>
+                        <li>Excellent in Computer Programming (2020)</li>
+                        <li>FCL Certificate (2020)</li>
+                        <li>NC2 in Animation (2021)</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <div class="right-column">
+                <section class="section">
+                    <h2 class="section-title">TECHNICAL EXPERIENCE</h2>
+                    <div class="experience-item">
+                        <p class="job-title">Software Developer Intern</p>
+                        <p class="company">Madrid | PITX, Parañaque City</p>
+                        <p class="date">Feb 2024 - April 2024</p>
+                        <p class="tech-stack">Technologies: Java, Spring Boot, React, PostgreSQL</p>
+                        <ul class="job-description">
+                            <li>Collaborated with development team to build new features for enterprise SaaS product</li>
+                            <li>Fixed critical bugs in authentication system improving security</li>
+                            <li>Wrote unit tests increasing code coverage by 15%</li>
+                            <li>Collaborated with cross-functional teams to design and implement new features</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <p class="job-title">Hardware Techniician</p>
+                        <p class="company">Freelance | Metro Manila</p>
+                        <p class="date">January 2019 - May 2024</p>
+                        <p class="tech-stack">Technologies: Windows, macOS, PC Assembly & Repair, Component Upgrades, System Maintenance</p>
+                        <ul class="job-description">
+                            <li>Built and repaired custom PCs tailored to client specifications and budgets</li>
+                            <li>Diagnosed and resolved hardware/software issues with 95% success rate</li>
+                            <li>Diagnosed and resolved hardware/software issues with 95% success rate</li>
+                            <li>Consulted clients on optimal hardware configurations for their needs</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">PROJECTS</h2>
+                    <div class="project-item">
+                        <p class="project-name">Student Enrollment System</p>
+                        <p class="date">October 2024 - March 2024</p>
+                        <p class="tech-stack">Technologies: HTML, CSS, SQL, Laravel</p>
+                        <ul class="project-description">
+                            <li>Developed a student portal with enrollment, grade tracking, and subject management</li>
+                            <li>Designed responsive user interfaces for students, faculty, and administrators</li>
+                            <li>Implemented secure authentication and role-based access control</li>
+                            <li>Created database schemas and optimized SQL queries for performance</li>
+                            <li>Deployed system with proper data backup and recovery procedures</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <p class="project-name">Community Platform for Lost Pets</p>
+                        <p class="date">September 2024 - December 2024</p>
+                        <p class="tech-stack">Technologies: HTML, CSS, JavaScript, SQL, Django, Google Maps API</p>
+                        <ul class="project-description">
+                            <li>Developed a real-time community platform for reporting and finding missing pets</li>
+                            <li>Implemented user authentication and profile management for pet owners</li>
+                            <li>Integrated Google Maps API for location-based missing pet reports</li>
+                           <li>Designed responsive UI with photo upload capabilities for pet identification</li>
+                           <li>Created admin dashboard for managing reports and user accounts</li>
+                           <li>Reduced pet recovery time by 35% in local community during beta testing
+                           </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <p class="project-name">Coffee Shop Point-of-Sale System</p>
+                        <p class="date">March 2023 - June 2023</p>
+                        <p class="tech-stack">Technologies: HTML, CSS, JavaScript, SQL, React.js, Node.js, Express</p>
+                        <ul class="project-description">
+                            <li>Developed a full-stack POS system with menu management, order tracking, and payment processing</li>
+                            <li>Implemented real-time order updates between kitchen displays and cashier stations</li>
+                            <li>Designed intuitive UI with touch-friendly components for fast checkout operations</li>
+                            <li>Created inventory management system with low-stock alerts and automatic reordering</li>
+                            <li>Integrated SQL database for sales analytics and customer purchase history</li>
+                            <li>Reduced average order processing time by 40% during stress testing</li>
+                        </ul>
+                    </div>
+                </section>
+                
+               
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // For actual PDF download functionality, you would need a library like jsPDF
+        document.querySelector('.download-btn').addEventListener('click', function() {
+            // This triggers the browser's print dialog
+            // For true PDF generation, consider using jsPDF or similar
+            window.print();
+        });
+    </script>
+</body>
+</html>

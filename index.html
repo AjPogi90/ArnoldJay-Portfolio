@@ -6,8 +6,11 @@
     <meta name="keywords" content="Arnold Jay, Portfolio, Web Developer, Designer, Projects, Contact">
     <meta name="description" content="Welcome to AJ's Portfolio. Front-End Web Developer, Designer, and Programmer.">
     
-    <title>AJ</title>
-    
+    <title>Arnold Jay Lolong | Comscie</title>
+    <!-- Add this before Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   
     <!-- Bootstrap CSS & Font Awesome Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -17,15 +20,41 @@
     <link rel="stylesheet" href="styles.css">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="image/AJLogo.png" type="image/svg+xml">
+    <link rel="shortcut icon" href="image/AJNewLogo.png" type="image/svg+xml">
 </head>
 <body>
+
+    <!-- Music Player Elements -->
+    <audio id="background-music" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-orangeclouds.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #3a7bfd;
+        border: 2px solid #3a7bfd;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    ">
+        <i class="fas fa-music"></i>
+    </button>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="image/AJLogo.png" alt="Logo" width="40" height="40">
+                <img src="image/NewLogo.png" alt="Logo" width="10" height="10">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -35,6 +64,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -47,9 +77,9 @@
         <div id="particles-js" class="position-absolute"></div>
         <div class="container text-center" data-aos="fade-up">
             <h1 class="hero__intro">Hi,There</h1>
-            <h2 class="hero__name">I’m <span class="hero__highlight">Arnold Jay</span></h2>
-            <div class="text"> Aspiring <span class="typing"></span></div>
-            
+            <h2 class="hero__name">I'm <span class="hero__highlight">Arnold Jay</span></h2>
+            <div class="text"> <span class="typing"></span></div>
+            <a href="resume.html" class="btn btn-outline-primary" style="position: relative; z-index: 1000;">View Resume</a>
         </div>
     </section>
 
@@ -62,75 +92,156 @@
                         <img src="image/profile.PNG" alt="Profile Image" class="img-fluid rounded-circle">
                     </div>
     
-    
-                <div class="col-md-6" data-aos="fade-left">
-                    <h2>About Me</h2>
-                    <p>Hello! I am <b>Arnold Jay G. Lolong</b>, dreaming to be a Web Developer and Programmer. "When the time is right, I, the Lord, will make it happen" Isaiah 60:22</p>
-                    <p>I have a strong passion for computer hardware, especially in building and maintaining PCs. Over the years, I've become an expert at selecting components, troubleshooting issues, and optimizing systems for performance. I enjoy helping others bring their ideal setups to life, whether by assembling a custom PC, upgrading hardware, or resolving technical issues.</p>
-
+                    <div class="col-md-6 mt-4 mb-4" data-aos="fade-left">
+                        <div style="padding: 60px;">
+                          <h2 class="mb-3">About Me</h2>
+                          <p style="font-size: 19px; line-height: 1.8; text-align: justify;">
+                            Hello! I am <span style="color: #3a7bfd; font-weight: bold;">Arnold Jay G. Lolong</span>, but you can call me AJ. I dream of becoming a Web Developer and Programmer. I believe that <strong>when</strong> you keep learning and pushing forward, great things will come. <strong>The</strong> journey is not always easy, but it is worth it. With <strong>time</strong>, effort, and faith, anything <strong>is</strong> possible. The <strong>right</strong> mindset, goals, and values will take you far. <strong>I</strong> hold on to my faith, trusting that <strong>the</strong> Lord will guide me. The <strong>Lord</strong> is my strength, and I know He <strong>will</strong> help me grow, <strong>make</strong> a difference, and see things through. I believe He will make <strong>it</strong> all work out, and every plan will <strong>happen</strong> at the right moment. <em>(Isaiah 60:22)</em>
+                          </p>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Skills & Abilities</h2>
-            <div class="row text-center">
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/html.png" alt="HTML" class="img-fluid mb-4" width="60">
-                    <h4>HTML</h4>
+   <!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container" style="padding: 20px;">
+      <h2 class="text-center mb-5">Skills & Abilities</h2>
+      <div class="row text-center">
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/html.png" alt="HTML" class="img-fluid mb-3" width="60">
+          <h4>HTML</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/css.png" alt="CSS" class="img-fluid mb-3" width="60">
+          <h4>CSS</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/js.png" alt="JavaScript" class="img-fluid mb-3" width="60">
+          <h4>JavaScript</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/C.png" alt="C" class="img-fluid mb-3" width="60">
+          <h4>C</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/c+.png" alt="C++" class="img-fluid mb-3" width="60">
+          <h4>C++</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/JavaLogo.png" alt="Java" class="img-fluid mb-3" width="60">
+          <h4>Java</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/php.png" alt="PHP" class="img-fluid mb-3" width="60">
+          <h4>PHP</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/PY.png" alt="Python" class="img-fluid mb-3" width="60">
+          <h4>Python</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/git.png" alt="Git" class="img-fluid mb-3" width="60">
+          <h4>Git</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/github.png" alt="GitHub" class="img-fluid mb-3" width="60">
+          <h4>GitHub</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/mongodb.png" alt="MongoDB" class="img-fluid mb-3" width="60">
+          <h4>MongoDB</h4>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+          <img src="skills/sqlLogo.png" alt="MySQL" class="img-fluid mb-3" width="60">
+          <h4>MySQL</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Certificate Section -->
+<section id="certificates" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Certificates</h2>
+        <div class="row justify-content-center g-4">
+            <!-- Certificate 1 -->
+            <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal1">
+                    <div class="certificate-img-container">
+                        <img src="certificate/ComprogNbpng.png" alt="Computer Programming Certificate" class="img-fluid certificate-img">
+                        <div class="certificate-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-expand"></i>
+                                <p>View Full Size</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-caption">
+                        <h5>Computer Programming</h5>
+                        <p class="text-muted">National Certificate II</p>
+                    </div>
                 </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/css.png" alt="CSS" class="img-fluid mb-4" width="60">
-                    <h4>CSS</h4>
+            </div>
+            
+            <!-- Certificate 2 -->
+            <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal2">
+                    <div class="certificate-img-container">
+                        <img src="certificate/FCL 3.jpg" alt="FCL Certificate" class="img-fluid certificate-img">
+                        <div class="certificate-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-expand"></i>
+                                <p>View Full Size</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-caption">
+                        <h5>Fundamentals of Computer Literacy</h5>
+                        <p class="text-muted">National Certificate II</p>
+                    </div>
                 </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/js.png" alt="JavaScript" class="img-fluid mb-4" width="60">
-                    <h4>JavaScript</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/C.png" alt="C" class="img-fluid mb-4" width="60">
-                    <h4>C</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/c+.png" alt="C++" class="img-fluid mb-4" width="60">
-                    <h4>C++</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/java.png" alt="Java" class="img-fluid mb-4" width="60">
-                    <h4>Java</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/php.png" alt="PHP" class="img-fluid mb-4" width="60">
-                    <h4>PHP</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/PY.png" alt="Python" class="img-fluid mb-4" width="60">
-                    <h4>Python</h4>
-                </div>
-
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/git.png" alt="Python" class="img-fluid mb-4" width="60">
-                    <h4>Git</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/github.png" alt="Python" class="img-fluid mb-4" width="60">
-                    <h4>GitHub</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/mongodb.png" alt="Python" class="img-fluid mb-4" width="60">
-                    <h4>Mongodb</h4>
-                </div>
-                <div class="col-md-3" data-aos="fade-up">
-                    <img src="skills/mysql.png" alt="Python" class="img-fluid mb-4" width="60">
-                    <h4>Mysql</h4>
-                </div>
-
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="certificateModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="certificate/ComprogNbpng.png" class="img-fluid" alt="Computer Programming Certificate" style="max-height: 80vh; width: auto;">
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <p class="mb-0">Computer Programming - National Certificate II</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="certificateModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="certificate/FCL 3.jpg" class="img-fluid" alt="FCL Certificate" style="max-height: 80vh; width: auto;">
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <p class="mb-0">Fundamentals of Computer Literacy - National Certificate II</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Projects Section -->
 <section id="projects" class="py-5">
     <div class="container">
@@ -169,16 +280,109 @@
         </div>
     </div>
 </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-5 text-center">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out to discuss potential collaborations.</p>
-           
+        <div class="contact-container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <div class="contact-header">
+                <p>Let's discuss your project</p>
+            </div>
+    
+            <div id="message" class="message"></div>
+    
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="messageText" name="message" required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="btnText">Send</span>
+                    <span class="loading" id="loading"></span>
+                </button>
+            </form>
         </div>
-        
-    </section>
+        <script>
+            // Line 155 - Enhanced showMessage function
+function showMessage(text, type, icon = false) {
+    let iconHtml = '';
+    if (icon) {
+        iconHtml = type === 'success' ? '<span class="success-icon"></span>' :
+                  type === 'error' ? '<span class="error-icon"></span>' : '';
+    }
+    
+    messageDiv.innerHTML = iconHtml + text;
+    messageDiv.className = `message ${type} show`;
+    
+    // Auto-hide message after 6 seconds
+    setTimeout(() => {
+        messageDiv.classList.remove('show');
+    }, 6000);
+}
 
+// Line 171 - Changed button text
+btnText.textContent = 'Sending...';
+btnText.textContent = 'Send Message';
+
+// Line 176-194 - Added form validation function
+function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('messageText').value.trim();
+
+    if (!name || !email || !subject || !message) {
+        showMessage('Please fill in all required fields', 'error', true);
+        return false;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showMessage('Please enter a valid email address', 'error', true);
+        return false;
+    }
+
+    return true;
+}
+
+// Line 210 - Added reply_to parameter
+reply_to: formData.get('email')
+
+// Line 215 - Enhanced success message
+showMessage('✓ Email sent successfully! Thank you for your message. We\'ll get back to you soon.', 'success', true);
+
+// Line 218-232 - Enhanced error handling
+let errorMessage = 'Failed to send email. ';
+
+if (error.status === 400) {
+    errorMessage += 'Please check your information and try again.';
+} else if (error.status === 401) {
+    errorMessage += 'Authentication error. Please try again later.';
+} else if (error.status >= 500) {
+    errorMessage += 'Server error. Please try again later.';
+} else {
+    errorMessage += 'Please check your internet connection and try again.';
+}
+
+showMessage(errorMessage, 'error', true);
+        </script>
     <!-- Footer -->
     <footer id="footer" class="footer d-flex flex-column">
         <div class="top d-flex justify-content-sm-around">
@@ -201,14 +405,10 @@
                 <a href="#projects">
                     <i class="fa fa-arrow-circle-right"></i>
                     Projects</a>
-                
             </div>
             <div class="content  d-flex flex-column">
                 <h4>Contact</h4>
-                <a
-                    href="mailto:Ajlolong15@gmail.com"
-                    rel="noopener noreferrer"
-                    target="_blank">
+                <a href="mailto:Ajlolong15@gmail.com" rel="noopener noreferrer" target="_blank">
                     <i class="fas fa-envelope"></i>
                     Ajlolong15@gmail.com</a>
                 <a>
@@ -245,6 +445,7 @@
             </div>
         </div>
     </footer>
+
     <!-- JS Libraries and Custom Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -256,6 +457,52 @@
         // Initialize AOS Library
         AOS.init();
         
+        // Music Player Functionality
+        const musicToggle = document.getElementById('music-toggle');
+        const backgroundMusic = document.getElementById('background-music');
+        
+        // Set initial volume (30%)
+        backgroundMusic.volume = 0.3;
+        
+        // Initialize icon based on initial state
+        updateMusicIcon();
+        
+        // Toggle music on button click
+        musicToggle.addEventListener('click', function() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+            } else {
+                backgroundMusic.pause();
+            }
+            updateMusicIcon();
+        });
+        
+        // Handle when music ends (should loop but just in case)
+        backgroundMusic.addEventListener('ended', function() {
+            backgroundMusic.currentTime = 0;
+            backgroundMusic.play();
+            updateMusicIcon();
+        });
+        
+        // Update music icon based on playback state
+        function updateMusicIcon() {
+            if (backgroundMusic.paused) {
+                musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                musicToggle.style.color = '#ff4757';
+                musicToggle.style.borderColor = '#ff4757';
+            } else {
+                musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                musicToggle.style.color = '#3a7bfd';
+                musicToggle.style.borderColor = '#3a7bfd';
+            }
+        }
+        
+        // Try to autoplay (will only work after user interaction)
+        document.addEventListener('click', function() {
+            backgroundMusic.play().then(() => {
+                updateMusicIcon();
+            }).catch(e => console.log("Autoplay prevented:", e));
+        }, { once: true });
     </script>
 </body>
 </html>

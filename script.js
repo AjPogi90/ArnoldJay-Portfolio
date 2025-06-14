@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach((section) => observer.observe(section));
 // Typing animation code
 const options = {
-    strings: [" Web Developer", " Web Designer", " Programmer", " GameDeveloper", "Hardware Engineer"],
+    strings: [" Web Developer", " Web Designer", " Programmer", " GameDeveloper", "Hardware Expert"],
     typeSpeed: 80,
     backSpeed: 50,
     loop: true,
